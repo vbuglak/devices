@@ -9,7 +9,7 @@
 <title>Spring Security</title>
 </head>
 <body>
-<h2>Registration Page</h2>
+<h2>Device create Page</h2>
 	<form:form method="post" action="/registry/devices/add" modelAttribute="Device">
 		<div >
 			<div>
