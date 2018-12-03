@@ -15,7 +15,10 @@
 		<a href="registry/devices/add">add</a>
 		<a href="registry/devices">check</a>
 		<a href="registry/devices/stats">stats</a>
-		<a href="registration">Sign Up</a>
+		<a href="registration">sign up</a>
+		<a href="login">sign in</a>
+		<a href="registry/json/devices">checkjson</a>
+		<a href="registry/xml/devices">checkxml</a>
 	</div>
 
 	<div>

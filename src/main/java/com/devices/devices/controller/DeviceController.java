@@ -1,7 +1,8 @@
 package com.devices.devices.controller;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import com.devices.devices.config.RabbitConfig;
-import org.apache.log4j.Logger;
 import com.devices.devices.domain.Device;
 import com.devices.devices.service.DeviceService;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -17,7 +18,7 @@ import java.util.List;
 @RequestMapping("/registry")
 public class DeviceController {
 
-    Logger logger = Logger.getLogger(DeviceController.class);
+    private static final Logger logger = LogManager.getLogger(DeviceController.class);
 
     @Autowired
     private RabbitTemplate rabbitTemplate;
