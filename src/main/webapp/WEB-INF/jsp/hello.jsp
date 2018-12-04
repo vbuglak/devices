@@ -10,15 +10,13 @@
 </head>
 <body>
 	<div>
-
-		<h2>Spring Security - JDBC Authentication</h2>
-		<a href="registry/devices/add">add</a>
-		<a href="registry/devices">check</a>
-		<a href="registry/devices/stats">stats</a>
-		<a href="registration">sign up</a>
-		<a href="login">sign in</a>
-		<a href="registry/json/devices">checkjson</a>
-		<a href="registry/xml/devices">checkxml</a>
+		<a href="registration">Регистрация пользователя</a><br>
+        <a href="login">Авторизация пользователя</a><br>
+		<a href="registry/devices/add">Добавить устройство</a><br>
+		<a href="registry/devices">Посмотреть список устройств</a><br>
+		<a href="registry/devices/stats">Статистика пользователей и устройств</a><br>
+		<a href="registry/json/devices">Посмотреть список устройств json</a><br>
+		<a href="registry/xml/devices">Посмотреть список устройств xml</a><br>
 	</div>
 
 	<div>
@@ -26,7 +24,7 @@
 			Hello <b><c:out value="${pageContext.request.remoteUser}"></c:out></b>
 		</h1>
 		<form action="/logout" method="post">
-			<input type="submit"  value="Sign Out" /> <input
+			<input type="submit"  value="Разлогиниться" /> <input
 				type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 		</form>
 	</div>
