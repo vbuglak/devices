@@ -24,10 +24,10 @@
 				<input type="submit" value="Sign In" />
 			</div>
 			<c:if test="${param.error ne null}">
-				<div class="alert-danger">Invalid username and password.</div>
+				<div>Invalid username and password.</div>
 			</c:if>
 			<c:if test="${param.logout ne null}">
-				<div class="alert-normal">You have been logged out.</div>
+				<div>You have been logged out.</div>
 			</c:if>
 		</div>
 		<input type="hidden" name="${_csrf.parameterName}"

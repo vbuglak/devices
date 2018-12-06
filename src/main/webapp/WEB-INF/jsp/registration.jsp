@@ -18,6 +18,9 @@
 			<div>
 				<form:input path="password" placeholder="Password" />
 			</div>
+			<c:if test="${param.existerror ne null}">
+                    <div>Username already exsist.</div>
+            </c:if>
 			<div>
 				<input type="submit" value="Sign Up" class="button red small" />
 			</div>

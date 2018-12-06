@@ -1,5 +1,6 @@
 package com.devices.devices.controller;
 
+import com.devices.devices.dao.UserRepository;
 import com.devices.devices.domain.User;
 import com.devices.devices.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,9 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private UserRepository userRepository;
 
     @GetMapping("/login")
     public String loginPage() {
@@ -25,8 +29,12 @@ public class UserController {
 
     @PostMapping("/registration")
     public String registration(@ModelAttribute("User") User user) {
-        userService.save(user);
-        return "redirect:/login";
+        if (userRepository.findByUserName(user.getUserName()) == null){
+            userService.save(user);
+            return "redirect:/login";
+        } else {
+            return "redirect:/registration?existerror";
+        }
     }
 
     @GetMapping("/")
